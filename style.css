@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    max-width: 900px;
+    background-color: aliceblue;
+}
+
+.content {
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    background-color: antiquewhite;
+}
+
+.flex {
+    display: flex;
+}
+
+/**
+ * @preserve jQuery modal plugin v1.0
+ * @email ongi.ua@gmail.com
+ * (c) 2014, Alexandra Bespalova
+ */
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(249, 240, 226, 0.7);
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.modal {
+    display: none;
+    visibility: hidden;
+    top: 4%;
+    width: 470px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    color: #000;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 25px 20px;
+    background: #efefef;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border-radius: 20px;
+
+    transition: opacity .5s;
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    -webkit-animation: zoomIn .8s;
+    animation: zoomIn .8s;
+    z-index: 11;
+    position: fixed;
+
+}
+
+.open-modal {
+    transition: opacity .5s;
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    -webkit-animation: zoomIn .8s;
+    animation: zoomIn .8s;
+    z-index: 11;
+    position: fixed;
+}
+@-webkit-keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.09);}
+    0% {transform: scale(1);}
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.09);}
+    0% {transform: scale(1);}
+}
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    text-indent: -9999px;
+    background: url(../img/close.png) no-repeat;
+    transition: 0.5s;
+    height: 20px;
+    z-index: 1;
+}
+.modal-close:hover{
+    transform: scale(1.1);
+}
+.modal input{
+    font-family: 'ZCOOLXiaoWei-Regular';
+    font-size: 24px;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+}
+.modal label{
+    font-size: 14px;
+}
+.modal .btn {
+    display: block;
+    padding: 15px 0;
+    margin: 25px 0;
+    font-size: 24px;
+    border: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    float: none;
+    width: 100%;
+}
+.modal input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #a9a9a9;
+    opacity: 1; /* Firefox */
+}
+
+.modal input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #a9a9a9;
+}
+
+.modal input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #a9a9a9;
+}
+.modal .flex{
+    justify-content: inherit;
+}
+.modal .flex input{
+    width: 25px;
+}
+.modal .flex img{
+    background-size: contain;
+    max-width: 100%;
+}
+.modal form{
+    width: 80%;
+    margin: auto;
+}
+.modal h4{
+    text-align: center;
+    font-family: 'ZCOOLXiaoWei-Regular';
+    font-size: 34px;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 831px) {
+
+}
+@media screen and (max-width: 551px){
+    .modal{
+        width: 98%;
+    }
+    .modal form {
+        width: 100%;
+    }
+    .modal h4 {
+        font-size: 26px;
+    }
+    .modal .flex {
+        justify-content: center;
+        text-align: center;
+    }
+
+}
